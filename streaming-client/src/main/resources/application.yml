@@ -1,0 +1,25 @@
+server:
+  port: 8185
+
+
+
+spring:
+  application:
+    name: streaming-client-svc
+  kafka:
+    bootstrap-servers=: localhost:9092
+    consumer:
+      group-id: ${spring.application.name}
+      auto-offset-reset: earliest
+
+
+
+
+
+idx:
+  kafka:
+    topic:
+      xml-feader-real-time-for-listed-company-widget : IDX_Real_Time_For_Listed_Company_widget
+      xml-feader-announcement-suspend-idxnet-widget : announcement-suspend-idxnet-widget
+      xml-feader-announcement-uma-widget : announcement_uma_widget
+      news-announcement-suspend-spop-widget : announcement-suspend-spop-widget
